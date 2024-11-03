@@ -1,0 +1,25 @@
+<div class="card-deck d-flex flex-wrap m-2">
+  @for(fooditem of filteredItemList; track fooditem) {
+  <div class="card m-4" style="width: 18rem">
+    <img class="card-img-top" [src]="fooditem.img" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">{{ fooditem.name }}</h5>
+      <p class="card-text">
+        {{ fooditem.description }}
+      </p>
+      <h6 class="card-title">price: {{ fooditem.price }} $</h6>
+      <h6 class="card-title">rating: {{ fooditem.rating }}</h6>
+      <h6 class="card-title">Category: {{ fooditem.category }}</h6>
+      <button
+        href="#"
+        class="btn btn-primary m-1"
+        (click)="addToCart(fooditem)"
+      >
+        Add to Cart
+      </button>
+      <button href="#" class="btn btn-primary">details</button>
+    </div>
+  </div>
+  <br />
+  }
+</div>

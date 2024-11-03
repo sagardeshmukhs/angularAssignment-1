@@ -1,0 +1,19 @@
+<div class="bg-black w-100" style="height: 80px">
+  <select
+    name="Category"
+    class="btn btn-secondary dropdown-toggle m-3"
+    [(ngModel)]="category"
+    (change)="changeValue()"
+  >
+    <option value="All">All</option>
+    <option value="Starter">Starter</option>
+    <option value="Bread">Bread</option>
+    <option value="Dessert">Dessert</option>
+    <option value="Main Course">Main Course</option>
+  </select>
+
+  <button class="btn btn-success">
+    Cart Item Count: {{ cartItems.length }}
+  </button>
+</div>
+<br />

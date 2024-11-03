@@ -1,0 +1,10 @@
+<div>
+  <app-filters
+    (sendCategory)="categoryFilter($event)"
+    [cartItems]="cartItems"
+  ></app-filters>
+  <app-foodtemplates
+    [filteredItemList]="filteredItems"
+    (sendAddToCartItem)="addToCart($event)"
+  ></app-foodtemplates>
+</div>
